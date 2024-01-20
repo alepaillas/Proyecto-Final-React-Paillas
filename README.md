@@ -1,8 +1,6 @@
-# React + Vite
+# Proyecto-Final-React-Paillas
+Proyecto final del curso de React en Coderhouse.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Utiliza Materialize para darle estilos a la página.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El último commit corresponde a la PreEntrega2
