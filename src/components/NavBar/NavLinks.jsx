@@ -1,16 +1,23 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import './NavLinks.css'
 
 const NavLinks = () => {
     return (
 	<>
 	    <li>
-		<Link to={`/`}>Home</Link>
+		<NavLink to={`/`}>
+		    Home
+		</NavLink>
             </li>
 	    <li>
-		<Link to={`/about-us`}>About Us</Link>
+		<NavLink to={`/about-us`}>
+		    About Us
+		</NavLink>
             </li>
             <li>
-		<Link to={`/contact`}>Contact</Link>
+		<NavLink to={`/contact`}>
+		    Contact
+		</NavLink>
             </li>
 	< />
     )
