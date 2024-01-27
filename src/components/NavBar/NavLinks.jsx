@@ -1,14 +1,16 @@
+import { Link } from 'react-router-dom'
+
 const NavLinks = () => {
     return (
 	<>
 	    <li>
-		<a href="#">Pinturas</a>
+		<Link to={`/`}>Home</Link>
             </li>
 	    <li>
-		<a href="#">Dibujos</a>
+		<Link to={`/about-us`}>About Us</Link>
             </li>
             <li>
-		<a href="#">Esculturas</a>
+		<Link to={`/contact`}>Contact</Link>
             </li>
 	< />
     )
