@@ -1,8 +1,6 @@
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
-
 const AboutUs = () => {
     return (
-	<ItemListContainer greeting={'AboutUs'}/>
+	<h2 className="center-align">Sobre Nosotras</h2>
     )
 }
 

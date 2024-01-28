@@ -10,7 +10,7 @@ import Home from './components/Home/Home'
 import AboutUs from './components/AboutUs/AboutUs'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
     // materialize javascript
@@ -23,11 +23,16 @@ function App() {
 	    <div className="App container">
 		<Header />
 		<NavBar />
-		<Routes>
-		    <Route path="/" element={<Home />} />
-		    <Route path="/about-us" element={<AboutUs />} />
-		    <Route path="/contact" element={<Contact />} />
-		</Routes>
+		<main>
+		    <Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/about-us" element={<AboutUs />} />
+			<Route path="/contact" element={<Contact />} />
+			<Route path="/category/:categoryId" element={<Home />} />
+			<Route path="/item/:itemId" element={<ItemDetailContainer />} />
+			<Route path='*' element={<h1>404 NOT FOUND</h1>} />
+		    </Routes>
+		</main>
 		<Footer />
 	    </div>
 	</BrowserRouter>

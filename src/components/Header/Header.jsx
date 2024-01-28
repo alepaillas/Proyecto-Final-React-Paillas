@@ -1,10 +1,16 @@
+import { Link } from 'react-router-dom'
+import './Header.css'
 import logo from '../../assets/img/circle-black-text-1024.webp'
 
 const Header = () => {
     return (
 	<header className="row valign-wrapper">
-	    <img src={logo} alt="Logo" id="maxLogoSize" className="col s6 responsive-img"></img>
-	    <h1 className="col s6 center-align">Galería Anfisbena</h1>
+	    <Link to={`/`} className="col s6">
+		<img src={logo} alt="Logo" className="logoImg"></img>
+	    </Link>
+	    <Link to={`/`} className="col s6">
+		<h1 className="center-align">Galería Anfisbena</h1>
+	    </Link>
 	</header>
     )
 }

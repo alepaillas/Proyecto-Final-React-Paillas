@@ -1,0 +1,9 @@
+.ItemCount {
+    display: flex;
+    justify-content: center;
+}
+
+.ItemCount *{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

@@ -1,0 +1,7 @@
+.centerNavLinks{
+    display: flex;
+}
+
+ul.centerNavLinks li{
+    flex-grow: 1;
+}

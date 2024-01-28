@@ -1,8 +1,12 @@
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import ItemCount from '../ItemCount/ItemCount'
 
 const Home = () => {
     return (
-	<ItemListContainer greeting={'Bienvenidos'}/>
+	<>
+	    <h2 className="center-align">Home</h2>
+	    <ItemListContainer greeting={'Bienvenidos'}/>
+	</>
     )
 }
 

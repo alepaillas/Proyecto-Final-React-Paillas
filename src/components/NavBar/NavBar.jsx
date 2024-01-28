@@ -1,5 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget'
 import NavLinks from './NavLinks'
+import './NavBar.css'
 
 const NavBar = () => {
     return (

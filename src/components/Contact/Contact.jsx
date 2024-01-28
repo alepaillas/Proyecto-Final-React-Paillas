@@ -1,8 +1,6 @@
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
-
 const Contact = () => {
     return (
-	<ItemListContainer greeting={'Contact'}/>
+	<h2 className="center-align">Contacto</h2>
     )
 }
 
