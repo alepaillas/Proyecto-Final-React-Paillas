@@ -1,22 +1,24 @@
 import { Link } from 'react-router-dom'
 
-const Item = ({name, img, price, id}) => {
+const Artist = ({name, img, price, id}) => {
     return (
 	<div className="card col s4">
             <div className="card-image">
 		<Link to={`/item/${id}`}>
 		    <img src={img} alt={name}></img>
 		</Link>
-		<span className="card-title">{name}</span>
+		<Link to={`/item/${id}`}>
+		    <span className="card-title">{name}</span>
+		</Link>
 		<a className="btn-floating btn-large halfway-fab waves-effect waves-light red">
 		    <i className="material-icons">add_shopping_cart</i>
 		</a>
 	    </div>
 	    <div className="card-content">
-		<p>${price}</p>
+		<p>lel</p>
 	    </div>
 	</div>
     )
 }
 
-export default Item
+export default Artist
