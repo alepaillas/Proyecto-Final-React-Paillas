@@ -28,7 +28,7 @@ function App() {
 			<Route path="/" element={<Home />} />
 			<Route path="/about-us" element={<AboutUs />} />
 			<Route path="/contact" element={<Contact />} />
-			<Route path="/category/:categoryId" element={<Home />} />
+			<Route path="/category/:Category" element={<Home />} />
 			<Route path="/artist/:artistId" element={<ItemDetailContainer />} />
 			<Route path="/product/:productId" element={<ItemDetailContainer />} />
 			<Route path='*' element={<h1>404 NOT FOUND</h1>} />
