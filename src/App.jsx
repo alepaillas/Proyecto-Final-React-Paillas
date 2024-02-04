@@ -29,7 +29,8 @@ function App() {
 			<Route path="/about-us" element={<AboutUs />} />
 			<Route path="/contact" element={<Contact />} />
 			<Route path="/category/:categoryId" element={<Home />} />
-			<Route path="/item/:itemId" element={<ItemDetailContainer />} />
+			<Route path="/artist/:artistId" element={<ItemDetailContainer />} />
+			<Route path="/product/:productId" element={<ItemDetailContainer />} />
 			<Route path='*' element={<h1>404 NOT FOUND</h1>} />
 		    </Routes>
 		</main>

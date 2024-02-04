@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { getProductById } from '../../asyncMock'
+import { getProductById, getArtistById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
-
-    const { itemId } = useParams()
+    const { productId } = useParams()
     
     useEffect(() => {
-	getProductById(itemId)
+	getProductById(productId)
 	    .then(response => {
 		setProduct(response)
 		//console.log(response)
@@ -18,11 +17,30 @@ const ItemDetailContainer = () => {
 	    .catch(error => {
 		console.error(error)
 	    })
-    }, [itemId])
+    }, [productId])
+
+	const [artist, setArtist] = useState(null)
+    const { artistId } = useParams()
+    
+    useEffect(() => {
+	getArtistById(artistId)
+	    .then(response => {
+		setArtist(response)
+		//console.log(response)
+	    })
+	    .catch(error => {
+		console.error(error)
+	    })
+    }, [artistId])
 
     return(
 	<div>
-	    <ItemDetail {...product} />
+		{
+			artist && <ItemDetail {...artist} />
+		}
+		{
+			product && <ItemDetail {...product} />
+		}
 	    <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada', quantity)}/>
 	</div>
     )
