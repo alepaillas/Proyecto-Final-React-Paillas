@@ -1,7 +1,7 @@
 .active {
-    background-color: red;
+  background-color: red;
 }
 
 .label-icon.active {
-    background-color: unset;
+  background-color: unset;
 }

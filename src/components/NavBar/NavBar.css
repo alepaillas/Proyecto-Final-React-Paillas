@@ -1,7 +1,7 @@
-.centerNavLinks{
-    display: flex;
+.centerNavLinks {
+  display: flex;
 }
 
-ul.centerNavLinks li{
-    flex-grow: 1;
+ul.centerNavLinks li {
+  flex-grow: 1;
 }
