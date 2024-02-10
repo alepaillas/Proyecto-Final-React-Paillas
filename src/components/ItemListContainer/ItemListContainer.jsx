@@ -12,38 +12,38 @@ import Categories from "../Categories/Categories";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
-  const { Category } = useParams();
+  const { categoryId } = useParams();
 
   useEffect(() => {
-    // si existe Category -> getProductsByCategory else getProducts
-    const asyncFunc = Category ? getProductsByCategory : getProducts;
+    // si existe categoryId -> getProductsByCategory else getProducts
+    const asyncFunc = categoryId ? getProductsByCategory : getProducts;
 
-    asyncFunc(Category)
+    asyncFunc(categoryId)
       .then((response) => {
         setProducts(response);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [Category]);
+  }, [categoryId]);
 
   // aquí se repite código, a futuro hay que reemplazar por función o componente de orden superior
 
   const [artists, setArtists] = useState([]);
-  //   const { Category } = useParams();
+  //   const { categoryId } = useParams();
 
   useEffect(() => {
-    // si existe Category -> getArtistsByCategory else getArtists
-    const asyncFunc = Category ? getArtistsByCategory : getArtists;
+    // si existe categoryId -> getArtistsByCategory else getArtists
+    const asyncFunc = categoryId ? getArtistsByCategory : getArtists;
 
-    asyncFunc(Category)
+    asyncFunc(categoryId)
       .then((response) => {
         setArtists(response);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [Category]);
+  }, [categoryId]);
 
   // para inicializar materialize tabs
   useEffect(() => {
