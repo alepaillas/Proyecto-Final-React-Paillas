@@ -1,10 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById, getArtistById } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetailContainer = () => {
+  const [quantityAdded, setQuantityAdded] = useState(0);
+
+  const { addProduct } = useContext(CartContext);
+
+  const handleOnAdded = (quantity) => {
+    setQuantityAdded(quantity);
+    // console.log("Cantidad agregada", quantity);
+    console.log(product)
+
+    // esta función esta definida en CartContext
+    addProduct(product, quantity);
+  };
+
   const [product, setProduct] = useState(null);
   const { productId } = useParams();
 
@@ -41,13 +55,7 @@ const ItemDetailContainer = () => {
 		 */}
       {artist && <ItemDetail {...artist} />}
       {product && <ItemDetail {...product} />}
-      {product && (
-        <ItemCount
-          initial={1}
-          stock={10}
-          onAdd={(quantity) => console.log("Cantidad agregada", quantity)}
-        />
-      )}
+      {product && <ItemCount initial={1} stock={10} onAdd={handleOnAdded} />}
     </div>
   );
 };

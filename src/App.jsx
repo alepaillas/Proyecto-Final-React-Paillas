@@ -10,6 +10,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   // materialize javascript
@@ -19,25 +20,30 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App container">
-        <Header />
-        <NavBar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/category/:categoryId" element={<Home />} />
-            <Route path="/artist/:artistId" element={<ItemDetailContainer />} />
-            <Route
-              path="/product/:productId"
-              element={<ItemDetailContainer />}
-            />
-            <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <CartProvider>
+        <div className="App container">
+          <Header />
+          <NavBar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/category/:categoryId" element={<Home />} />
+              <Route
+                path="/artist/:artistId"
+                element={<ItemDetailContainer />}
+              />
+              <Route
+                path="/product/:productId"
+                element={<ItemDetailContainer />}
+              />
+              <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </CartProvider>
     </BrowserRouter>
   );
 }
