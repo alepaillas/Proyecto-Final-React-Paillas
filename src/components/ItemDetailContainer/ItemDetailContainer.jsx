@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
   const handleOnAdded = (quantity) => {
     setQuantityAdded(quantity);
     // console.log("Cantidad agregada", quantity);
-    console.log(product)
+    // console.log(product)
 
     // esta función esta definida en CartContext
     addProduct(product, quantity);

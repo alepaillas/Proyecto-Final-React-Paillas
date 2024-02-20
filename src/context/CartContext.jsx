@@ -6,8 +6,7 @@ export const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
-  console.log(cart);
+  // console.log(cart);
 
   const addProduct = (product, quantity) => {
     if (!isInCart(product.id)) {
@@ -16,7 +15,7 @@ export const CartProvider = ({ children }) => {
       M.toast({ html: "Se agregó " + quantity + " item(s) al carrito." });
     } else {
       // console.error("El producto ya fue agregado");
-      M.toast({ html: "Este producto ya esta en el carrito."});
+      M.toast({ html: "Este producto ya esta en el carrito." });
     }
   };
 
@@ -33,9 +32,26 @@ export const CartProvider = ({ children }) => {
     return cart.some((product) => product.id === productId);
   };
 
+  const totalProductsInCart = () => {
+    // console.log(cart.length);
+    return cart.length;
+  };
+
+  const productsInCart = () => {
+    // console.log(cart);
+    return cart;
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addProduct, removeProduct, clearCart }}
+      value={{
+        cart,
+        addProduct,
+        removeProduct,
+        clearCart,
+        totalProductsInCart,
+        productsInCart,
+      }}
     >
       {children}
     </CartContext.Provider>

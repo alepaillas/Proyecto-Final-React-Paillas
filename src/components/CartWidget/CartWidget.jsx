@@ -1,5 +1,16 @@
+import { NavLink } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+
 const CartWidget = () => {
-  return <div className="col s2 center-align">🛒 0</div>;
+  const { totalProductsInCart } = useContext(CartContext);
+  // console.log(totalProductsInCart())
+
+  return (
+    <NavLink to={"/cart"} className="col s2 center-align">
+      🛒 {totalProductsInCart()}
+    </NavLink>
+  );
 };
 
 export default CartWidget;
