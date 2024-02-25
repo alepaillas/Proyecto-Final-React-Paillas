@@ -101,16 +101,18 @@ const ItemListContainer = ({ greeting }) => {
       <div className="col s12">
         <ul className="tabs">
           <li className="tab col s6">
-            <a href="#artistas">Artistas</a>
+            <a href="#pinturas">Pinturas</a>
           </li>
           <li className="tab col s6">
-            <a href="#pinturas">Pinturas</a>
+            <a href="#artistas">Artistas</a>
           </li>
         </ul>
       </div>
-      {uniqueCategories.map((category, index) => (
-        <Categories key={index} category={category} />
-      ))}
+      <div className="col s12 marginVerticalHalf">
+        {uniqueCategories.map((category, index) => (
+          <Categories key={index} category={category} />
+        ))}
+      </div>
       <div id="artistas" className="col s12">
         <ArtistList artists={artists} />
       </div>

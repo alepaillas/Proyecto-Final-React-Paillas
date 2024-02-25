@@ -1,0 +1,79 @@
+/* helper classes */
+
+.flex {
+  display: flex;
+}
+
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+.justifyContentSpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.alignItemsCenter {
+  align-items: center;
+}
+
+.gridAutoMargin {
+  display: grid;
+  margin: auto;
+}
+
+.margin0 {
+  margin: 0;
+}
+
+.marginHorizontal1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.marginHorizontal2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.marginVerticalHalf {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.marginVertical1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.marginVertical2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.marginLeft1 {
+  margin-left: 1rem;
+}
+
+.marginLeft2 {
+  margin-left: 2rem;
+}
+
+.marginRight2 {
+  margin-right: 2rem;
+}
+
+.marginTop1 {
+  margin-top: 1rem;
+}
+
+.marginTop2 {
+  margin-top: 2rem;
+}
+
+.hrMedium {
+  width: 36rem;
+}

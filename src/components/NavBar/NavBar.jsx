@@ -11,7 +11,7 @@ const NavBar = () => {
         </a>
 
         <div className="row">
-          <form className="col s4">
+          <form className="col l4 m6 s6 offset-m1 offset-s0">
             <div className="input-field">
               <input id="search" type="search" required></input>
               <label className="label-icon" htmlFor="search">
