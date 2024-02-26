@@ -6,7 +6,7 @@ export const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
+  // console.log(cart);
 
   const addProduct = (product, quantity) => {
     if (!isInCart(product.id)) {
@@ -37,12 +37,25 @@ export const CartProvider = ({ children }) => {
     const initialValue = 0;
     const sumWithInitial = cart.reduce(
       // importante el parseInt para asegurarnos de no sumar strings
-      (accumulator, currentValue) => accumulator + (parseInt(currentValue.price) * currentValue.quantity),
+      (accumulator, currentValue) =>
+        accumulator + parseInt(currentValue.price) * currentValue.quantity,
       initialValue
     );
 
     // formatea los números segun localización
     return new Intl.NumberFormat().format(sumWithInitial);
+  };
+
+  const totalItems = () => {
+    const initialValue = 0;
+    const sumWithInitial = cart.reduce(
+      // importante el parseInt para asegurarnos de no sumar strings
+      (accumulator, currentValue) => accumulator + currentValue.quantity,
+      initialValue
+    );
+
+    // formatea los números segun localización
+    return sumWithInitial;
   };
 
   return (
@@ -54,6 +67,7 @@ export const CartProvider = ({ children }) => {
         clearCart,
         isInCart,
         totalValue,
+        totalItems,
       }}
     >
       {children}

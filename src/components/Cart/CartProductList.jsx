@@ -10,7 +10,7 @@ const CartProductList = ({ id, name, price, quantity }) => {
   };
 
   return (
-    <li className="productListWrapper">
+    <li className="productListWrapper alignItemsCenter marginVertical1">
       <span className="productListName">{name}</span>
       {/* formateamos el precio según localización */}
       <span className="productListPrice">

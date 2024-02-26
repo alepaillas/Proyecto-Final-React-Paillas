@@ -9,12 +9,14 @@ const Checkout = () => {
     <>
       <div className="center marginTop2">
         <p>El detalle de su compra es:</p>
-        {cart.map((e) => (
-          <p>
-            {e.name} $ {new Intl.NumberFormat().format(e.price)} x {e.quantity}{" "}
-            = ${" "}
+        {cart.map((product) => (
+          // importante añadir el key
+          // https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key
+          <p key={product.id} {...product}>
+            {product.name} $ {new Intl.NumberFormat().format(product.price)} x{" "}
+            {product.quantity} = ${" "}
             {new Intl.NumberFormat().format(
-              parseInt(e.price) * parseInt(e.quantity)
+              parseInt(product.price) * parseInt(product.quantity)
             )}
           </p>
         ))}
