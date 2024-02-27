@@ -7,6 +7,7 @@ import {
   where,
   query,
   limit,
+  addDoc,
 } from "firebase/firestore";
 
 // aqui hay mucho potencial de optimizacion pero ahora no me da el tiempo
@@ -165,4 +166,34 @@ export const getArtistsByCategory = (artistCategory) => {
       resolve(dataExtraida.filter((e) => e.category == artistCategory));
     });
   });
+};
+
+/* export const sendOrder = () => {
+  const order = {
+    buyer: { name: "usertest", phone: "1111", email: "a@a.com" },
+    items: [{ name: "bici", price: 100 }],
+    total: 100,
+  };
+  const db = getFirestore();
+  const ordersCollection = collection(db, "orders");
+  // promise
+  addDoc(ordersCollection, order);
+}; */
+
+export const sendOrder = async (order) => {
+  /*   const order = {
+    buyer: { name: "usertest", phone: "1111", email: "a@a.com" },
+    items: [{ name: "bici", price: 100 }],
+    total: 100,
+  }; */
+
+  const db = getFirestore();
+  const ordersCollection = collection(db, "orders");
+
+  try {
+    const docRef = await addDoc(ordersCollection, order);
+    return docRef.id; // Return the ID of the newly created document
+  } catch (error) {
+    throw error; // Throw any errors for the caller to handle
+  }
 };
