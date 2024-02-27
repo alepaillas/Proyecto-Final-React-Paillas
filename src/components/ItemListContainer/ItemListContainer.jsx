@@ -75,10 +75,21 @@ const ItemListContainer = ({ greeting }) => {
     queryArtists();
   }, [categoryId]);
 
-  // para tener una lista de categorias únicas
-  // primero unimos los arrays de artistas y productos
-  const categories = [...artists, ...products];
-  const categoryNames = categories.map((e) => e.category);
+  // para tener categorias únicas en los chips de la home:
+  // los artistas tienen una propiedad category que es un array de categorias en lugar de un string
+  // por lo que para extraer esas categorias debemos usar el metodo flatMap
+  // este funciona igual que un map, pero aplana los arrays anidados a un único nuevo array
+  // entonces podemos simplemente extraer las categorias igual que si fueran pares category: categoryName,
+  // como en el caso de los productos
+  const artistCategories = artists.flatMap((artist) => artist.category);
+  //console.log(artistCategories);
+
+  const productCategories = products.map((product) => product.category);
+  //console.log(productCategories);
+
+  // unimos los arrays de categorias
+  const categoryNames = [...artistCategories, ...productCategories];
+  //console.log(categoryNames);
 
   const [uniqueCategories, setUniqueCategories] = useState([]);
 

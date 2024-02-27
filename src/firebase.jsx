@@ -161,9 +161,14 @@ export const getArtistsByCategory = (artistCategory) => {
         id: doc.id,
         ...doc.data(),
       }));
-      // console.log(dataExtraida);
-      // resolve(dataExtraida);
-      resolve(dataExtraida.filter((e) => e.category == artistCategory));
+      //console.log(dataExtraida);
+      //resolve(dataExtraida);
+      // filtramos los artistas segun categoria usando el metodo .includes que recorre el array de categorias
+      resolve(
+        dataExtraida.filter((artist) =>
+          artist.category.includes(artistCategory)
+        )
+      );
     });
   });
 };
