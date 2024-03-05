@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "./Item.css"
 
 const Product = ({ name, img, price, id }) => {
   const { cart, addProduct } = useContext(CartContext);
@@ -18,7 +19,7 @@ const Product = ({ name, img, price, id }) => {
   };
 
   return (
-    <div className="card col s4">
+    <div className="card product">
       <div className="card-image">
         <Link to={`/product/${id}`}>
           <img src={img} alt={name}></img>

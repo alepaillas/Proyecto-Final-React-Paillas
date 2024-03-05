@@ -1,0 +1,16 @@
+.product {
+  display: inline-block;
+  break-inside: avoid;
+  margin-bottom: 3rem;
+}
+
+.artist {
+  display: inline-block;
+  break-inside: avoid;
+  margin-bottom: 3rem;
+}
+
+.artistTitle {
+  font-size: 24px;
+  font-weight: 300;
+}

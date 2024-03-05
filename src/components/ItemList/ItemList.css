@@ -1,0 +1,11 @@
+.productList {
+  column-width: 21rem;
+  column-gap: 3rem;
+  margin-top: 2rem;
+}
+
+.artistList {
+  column-width: 28rem;
+  column-gap: 3rem;
+  margin-top: 2rem;
+}

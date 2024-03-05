@@ -132,7 +132,7 @@ const ItemListContainer = ({ greeting }) => {
 
       {loading && <Loader />}
 
-      <div className="col s12 marginTop1 center">
+      <div className="col s12 marginTop2 center">
         {uniqueCategories.map((category, index) => (
           <Categories key={index} category={category} />
         ))}

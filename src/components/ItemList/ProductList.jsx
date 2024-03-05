@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Product from "../Item/Product";
+import "./ItemList.css";
 
 const ProductList = ({ loading, products }) => {
   return (
-    <div className="row">
+    <div className="productList">
       {/* alternativa con ternary operator ya que no podemos
        usar la sintaxis if() {} con arrow function component */}
       {/* si no estamos cargando y no hay productos, entonces render */}

@@ -79,6 +79,14 @@
   margin-top: 2rem;
 }
 
+.marginTop3 {
+  margin-top: 3rem;
+}
+
+.marginBottom1 {
+  margin-bottom: 1rem;
+}
+
 .hrMedium {
   width: 36rem;
 }

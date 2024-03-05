@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Artist from "../Item/Artist";
+import "./ItemList.css";
 
 const ArtistList = ({ loading, artists }) => {
   return (
-    <div className="row">
+    <div className="artistList">
       {/* alternativa con ternary operator ya que no podemos
        usar la sintaxis if() {} con arrow function component */}
       {/* si no estamos cargando y no hay artistas, entonces render */}
