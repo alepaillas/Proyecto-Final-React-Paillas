@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <p className="center-align">
-        © 2024 Galería Anfisbena, todos los derechos reservados.
+        © MMXXIV Anfisbena Galería de Arte Contemporáneo, todos los derechos reservados.
       </p>
     </footer>
   );

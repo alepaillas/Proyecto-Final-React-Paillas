@@ -11,9 +11,9 @@ const CartProductList = ({ id, name, price, quantity }) => {
 
   return (
     <li className="productListWrapper alignItemsCenter marginVertical1">
-      <span className="productListName">{name}</span>
+      <span className="productListName uiText">{name}</span>
       {/* formateamos el precio según localización */}
-      <span className="productListPrice">
+      <span className="productListPrice uiText">
         $ {new Intl.NumberFormat().format(price)} x {quantity}
       </span>
       <button

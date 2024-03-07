@@ -9,7 +9,8 @@ const Header = () => {
         <img src={logo} alt="Logo" className="logoImg"></img>
       </Link>
       <Link to={`/`} className="col s6">
-        <h1 className="center-align">Galería Anfisbena</h1>
+        <h1 className="center-align">Anfisbena</h1>
+        <h2 className="center-align">Galería de Arte Contemporáneo</h2>
       </Link>
     </header>
   );

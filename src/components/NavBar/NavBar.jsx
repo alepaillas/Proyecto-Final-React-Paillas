@@ -5,7 +5,7 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <nav className="nav-wrapper">
+      <nav className="nav-wrapper black borderRadius3">
         <a href="#" data-target="mobile-demo" className="sidenav-trigger">
           <i className="material-icons">menu</i>
         </a>

@@ -4,7 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 const Home = () => {
   return (
     <>
-      <h2 className="center-align">Home</h2>
+      <h3 className="center-align">Home</h3>
       <ItemListContainer greeting={"Bienvenidos"} />
     </>
   );

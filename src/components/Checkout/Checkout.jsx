@@ -107,7 +107,9 @@ const Checkout = () => {
                   required
                   className="validate"
                 ></input>
-                <label htmlFor="name">Nombre y Apellido</label>
+                <label className="uiText" htmlFor="name">
+                  Nombre y Apellido
+                </label>
               </div>
               <div className="input-field">
                 <i className="material-icons prefix">email</i>
@@ -119,7 +121,9 @@ const Checkout = () => {
                   required
                   className="validate"
                 ></input>
-                <label htmlFor="email">E-mail</label>
+                <label className="uiText" htmlFor="email">
+                  E-mail
+                </label>
               </div>
               <div className="input-field">
                 <i className="material-icons prefix">email</i>
@@ -136,7 +140,9 @@ const Checkout = () => {
                       : "validate valid"
                   }
                 ></input>
-                <label htmlFor="confirmEmail">Repita su E-mail</label>
+                <label className="uiText" htmlFor="confirmEmail">
+                  Repita su E-mail
+                </label>
                 {/* helper text condicional en caso de error */}
                 {showConfirmEmailError && (
                   <span
@@ -155,7 +161,9 @@ const Checkout = () => {
                   required
                   className="validate"
                 ></input>
-                <label htmlFor="phone">Teléfono (+56912345678)</label>
+                <label className="uiText" htmlFor="phone">
+                  Teléfono (+56912345678)
+                </label>
               </div>
               <div className="input-field">
                 <i className="material-icons prefix">location_on</i>
@@ -167,23 +175,23 @@ const Checkout = () => {
                   required
                   className="validate"
                 ></input>
-                <label htmlFor="address">
+                <label className="uiText" htmlFor="address">
                   Mi calle 1234, Mi comuna, Mi región
                 </label>
               </div>
-              <button type="submit" className="btn gridAutoMargin">
+              <button type="submit" className="btn gridAutoMargin uiText">
                 Finalizar compra
               </button>
             </form>
           </div>
           <div className="center">
-            <Link to="/cart" className="btn-small marginHorizontal1">
+            <Link to="/cart" className="btn-small marginHorizontal1 uiText">
               Volver
             </Link>
           </div>
         </>
       ) : (
-        <div className="center">
+        <div className="center marginBottom2">
           <p>El id de tu pedido es:</p>
           <b>{orderId}</b>
           <p>Guardalo en algún lugar seguro para consultarnos por él.</p>

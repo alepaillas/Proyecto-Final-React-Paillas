@@ -29,7 +29,7 @@ const Product = ({ name, img, price, id }) => {
         </Link>
         <button
           onClick={handleOnClick}
-          className="btn-floating btn-large halfway-fab waves-effect waves-light red"
+          className="btn-floating btn-large halfway-fab waves-effect waves-light primaryColor"
         >
           <i className="material-icons">add_shopping_cart</i>
         </button>

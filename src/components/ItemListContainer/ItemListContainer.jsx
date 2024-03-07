@@ -118,7 +118,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div className="row">
-      <h3 className="col s12 center-align">{greeting}</h3>
+      <h4 className="col s12 center-align">{greeting}</h4>
       <div className="col s12">
         <ul className="tabs">
           <li className="tab col s6">
